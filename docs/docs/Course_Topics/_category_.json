@@ -1,0 +1,9 @@
+{
+  "label": "Course Topics",
+  "position": 300,
+  "link":
+    {
+      "type": "generated-index",
+      "slug": "/Course_Topics"
+   }
+}
