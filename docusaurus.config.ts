@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic'
 const config: Config = {
   title: 'MRAE Capstone Course', // Site title displayed in the browser tab
   tagline: 'MRAE Capstone Course', // Short description shown in meta tags
-  favicon: 'icon.png', // Path to site favicon
+  favicon: 'https://cdn.riverscapes.net/icons/consortium/consortium.svg', // Path to site favicon
 
   future: {
     v4: true, // Enables compatibility with upcoming Docusaurus v4 features
@@ -44,7 +44,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/logo.png', // Social sharing image
+    image: 'https://cdn.riverscapes.net/icons/consortium/consortium.svg', // Social sharing image
 
     // algolia: {
     //   // The application ID provided by Algolia
@@ -83,7 +83,7 @@ const config: Config = {
       title: 'Management of Restoration & Aquatic Ecosystems Capstone I & II', // Navbar title
       logo: {
         alt: 'MRAE Logo',
-        src: 'img/logo.png',
+        src: 'https://cdn.riverscapes.net/icons/consortium/consortium.svg',
       },
       items: [
         // { to: '/menu', label: 'MENU HERE', position: 'left' },
