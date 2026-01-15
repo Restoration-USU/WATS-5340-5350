@@ -2,11 +2,9 @@
 title: Grading Exercise in GIS
 sidebar_position: 3
 ---
+*For 2026, this exercise is **optional**. We recommend it if you are comfortable working with DEMs or want to gain more experience in using DEMs.*
 
 
-There are many options for how to create a digital elevation model to represent your grading plan. For example, most design professionals use [AutoCAD's Civil 3D](https://www.autodesk.com/products/civil-3d/overview) software, as it has sophisticated [grading tools](https://knowledge.autodesk.com/support/civil-3d/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Civil3D-UserGuide/files/GUID-3E75D600-B442-4C78-8DCC-C649E1ED1F87-htm.html). In this class, everyone has experience in ArcGIS so we will stick with implementing a grading workflow in ArcGIS, despite it being inefficient, so you don't have to learn a new piece of software.
-
-We assume you have familiarity with creating TINs and raster DEMs in ArcGIS using the 3D Analyst Extension. If not, you may find [this tutorial](http://gcd.riverscapes.xyz/Tutorials/Building_DEMs/building-dems.html) helpful.
 
 <GoogleSlides src="https://docs.google.com/presentation/d/e/2PACX-1vSPh1Fmqs0hfmQcZJx_4icaaOzRE4D_dsaicXIPGgx4In_p3UdKYW28NeQEsQ5wkg1mZApthNzcBRbe/embed?start=false&loop=false&delayms=3000" title="Grading in GIS Slides" width={960} height={749} />
 
@@ -45,6 +43,14 @@ We want a new DEM, that is the old DEM outside our limits of grading, and is a m
 ## Tutorials
 
 There are two common methods for "getting a topo" of your design. The first is to just build that topo inside your limits of grading. The second is to build that new topo for the entire area of interest. For the homework, you only need to do option 1. Both are shown below.
+
+:::warning
+This tutorial has not been updated for ArcPro or QGIS. ArcGIS 10.x has been depricated and is no longer supported by Esri. It is recommended you use ArcGIS Pro or QGIS. However, this exercise is written for ArcGIS 10.x.
+:::
+
+There are many options for how to create a digital elevation model to represent your grading plan. For example, most design professionals use [AutoCAD's Civil 3D](https://www.autodesk.com/products/civil-3d/overview) software, as it has sophisticated [grading tools](https://knowledge.autodesk.com/support/civil-3d/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Civil3D-UserGuide/files/GUID-3E75D600-B442-4C78-8DCC-C649E1ED1F87-htm.html). In this class, everyone has experience in ArcGIS so we will stick with implementing a grading workflow in ArcGIS, despite it being inefficient, so you don't have to learn a new piece of software.
+
+We assume you have familiarity with creating TINs and raster DEMs in ArcGIS 10.x using the 3D Analyst Extension. If not, you may find [this tutorial](http://gcd.riverscapes.xyz/Tutorials/Building_DEMs/building-dems.html) helpful.
 
 ---
 
@@ -109,6 +115,11 @@ Convert your TIN to a DEM of the *exact* same resolution and orthogonal to the e
 #### 5. Do Earthwork Calculation in GCD
 
 So, we want to know how much material we're moving around, how much cut and how much fill. We will use the [GCD Add-In](http://gcd.riverscapes.xyz) to do that (see [here for installation instructions](http://gcd.riverscapes.xyz/Download/install.html)).
+
+:::tip
+You can do this part in the stand-alone version of GCD (PC only), but you do not need ArcGIS to do the analysis. The stand-alone version is easy to use and works the same, just without map functionality. An ArcPro GCD Viewer is in development but not yet released (due spring 2026).
+
+:::
 
 <YouTubeEmbed videoId="KJspSxmvgsU" title="Earthwork calculation in GCD" />
 
