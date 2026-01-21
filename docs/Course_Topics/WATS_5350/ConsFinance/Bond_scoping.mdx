@@ -46,20 +46,47 @@ To identify your LTPBR treatments:
 
 There are lots of ways to approximate the above, but here is one recommended workflow based on using data from the Data Exchange, QGIS and Q Riverscapes Viewer.
 
-In class, we just used [Web Viewer](https://viewer.riverscapes.net/software-help/help-web/) to look at projects. Below, I show you how to do this in QGIS with [QViewer](https://viewer.riverscapes.net/software-help/help-qgis/) (if you want to install QGIS from scratch for first time, [see here](https://qgis.org/download/) and you can do it < 5 minutes). You can also do same thing in ArcGIS 10.X with [ArcViewer](https://viewer.riverscapes.net/software-help/help-arc/).
+In class, we just used [Web Viewer](https://viewer.riverscapes.net/software-help/help-web/) to look at projects. Below, I show you how to do this in QGIS with [Q Riverscapes Viewer](https://viewer.riverscapes.net/software-help/help-qgis/) (if you want to install QGIS from scratch for first time, [see here](https://qgis.org/download/) and you can do it < 5 minutes). You can also do a similar thing in ArcPro with [ArcPro Riverscapes Viewer](https://viewer.riverscapes.net/software-help/help-arcpro).
 
 ### Getting Data from Data Exchange
 
-**Warehouse Info**
+In class, we introduced you to the Riverscapes Consortium [Data Exchange](https://data.riverscapes.net/). There are numerous model outputs that can be used from our family of 10 [riverscape network models](https://tools.riverscapes.net/). These models are run at the HUC 10 scale (for the Bear River HUC6 `160102` there are 27 HUC 10s). To do this assignment, you could download all 270 models and attempt to merge them. Good luck. Or... 
 
-In class, we introduced you to the Riverscapes Consortium [Data Exchange](https://data.riverscapes.net/).
+For this assignment, it will be best to generate your own RME merge (IGO Scrape) and a larger merged RS Context project:
 
-For this assignment, it will be easiest to download two projects from the exchange:
 
-- [Bear River Riverscape Metric Engine Synthesis](https://data.riverscapes.net/p/212f1525-7083-4737-afe6-5b3c23e49830/)
-- [Bear River Riverscapes Context](https://data.riverscapes.net/p/dd1318f8-2b3f-49b9-9323-ff007c327195/)
+<ToolsWrapper
+    cardsize="sm"
+    cards={[
+        {
+        title: "Run your own IGO Scrape for Bear River",
+        description: "Choose HUC-6 Watersheds, Zoom to Bear (160102) and Create IGO Scrape Synthesis of all the Riverscapes Metric Engine outputs.",
+        logoUrl: "https://cdn.riverscapes.net/icons/products/reports/reports.svg",
+        toolUrl: "https://reports.riverscapes.net/report/igo-scraper",
+        },           
+        {
+        title: "Bear River Riverscape Metric Engine Synthesis",
+        description: "This is an older project, but can be used as a backup to the IGO report.",
+        logoUrl: "https://cdn.riverscapes.net/icons/network-models/rme/rme.svg",
+        toolUrl: "https://data.riverscapes.net/p/212f1525-7083-4737-afe6-5b3c23e49830/",
+        },     
+{
+        title: "Bear River Riverscapes Context",
+        description: "A single Riverscapes Context for base layers across entire ",
+        logoUrl: "https://cdn.riverscapes.net/icons/network-models/vbet/vbet.svg",
+        toolUrl: "https://data.riverscapes.net/p/dd1318f8-2b3f-49b9-9323-ff007c327195/",
 
-**Video Tutorial**
+        }, 
+
+    ]}
+    />
+
+    See [here](https://qris.riverscapes.net/tutorials/trainings-workshops/usu-ltpbr-level3/cewa6629#2-riverscapes-metric-engine) for more information on how to use RME.
+
+**Old Video Tutorial**
+:::warning
+These have not yet been updated for newer Q Riverscapes Viewer. We will demo this in class. 
+:::
 
 <YouTubeEmbed videoId="Xlg--J14JAE" title="Data Exchange & QGIS Overview" />
 
@@ -78,6 +105,11 @@ It could take you a very long time to manually digitize polygons looking just at
 5. Use summary statistics to get total acreage.
 6. Fill out spreadsheet with acreage and cost estimates.
 
+
+:::warning
+These have not yet been updated for newer Q Riverscapes Viewer. The workflow steps are the same. 
+:::
+
 **Video Tutorial**
 
 <YouTubeEmbed videoId="9JX5u53NuDI" title="Riverscape Context & LANDFIRE in QGIS" />
@@ -91,7 +123,7 @@ _55 minutes_
 
 We will learn more about the Beaver Restoration Assessment Tool ([BRAT](https://tools.riverscapes.net/brat/)) in our LTPBR Planning Module. For now, we are just going to take its analysis of "Conservation and Restoration Opportunities", that are available as fields in the Metric Engine project to approximate where and how much [low-tech PBR restoration](http://lowtechpbr.restoration.usu.edu/) to do in your HUC 8. In this 17 minute video, we do the following steps:
 
-1. Open up The Metric Engine Synthesis in QViewer in QGIS
+1. Open up The Metric Engine Synthesis (IGO Scrape) you created in QViewer in QGIS
 2. Load any output layer, all available fields for analysis are visible in the attribute table. A description of all output layers can be found [here](https://tools.riverscapes.net/rme/)
 3. Summarize the total mileage of riverscape where `brat_igo_opportunity` is "Conservation/Appropriate for Translocation" or "Encourage Beaver Expansion/Colonization"
 4. The field for riverscape length is `centerline_length` and the units are meters.
@@ -105,7 +137,7 @@ We will learn more about the Beaver Restoration Assessment Tool ([BRAT](https://
 
 _17 minutes_
 
-## What you are being asked to turn in on Canvas
+## What you are being asked to turn in on Canvas (each group)
 
 Please upload:
 
